@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('registration')">Register</a></li>
+                <li><a href="#" onclick="showSection('items')">Items</a></li>
+                <li><a href="#" onclick="showSection('cart')">Cart</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- Sections for different pages -->
+        <div id="home-section" class="section">Welcome to my Online Store!</div>
+
+        <div id="registration-section" class="section" style="display:none;">
+            <h2>Register</h2>
+            <form id="registration-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required><br>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <div id="items-section" class="section" style="display:none;">
+            <h2>Items for Sale</h2>
+            <div id="items"></div>
+        </div>
+        <div id="cart-section" class="section" style="display:none;">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <p id="total"></p>
+            <button id="checkout">Checkout</button>
+            <div id="payment-options" style="display:none;">
+                <button id="mpesa">Pay with M-Pesa</button>
+                <button id="card">Pay with Card</button>
+                <button onclick="orderThroughWhatsApp()">Order through WhatsApp</button>
+            </div>
+        </div>
+
+        <!-- Contact Us Section -->
+        <div id="contact-section" class="section" style="display:none;">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need help, feel free to reach out to us!</p>
+            <ul>
+                <li><strong>WhatsApp:</strong> <a href="https://wa.me/254113236282" target="_blank"
+                        rel="noopener noreferrer">+254113236282</a></li>
+                <li><strong>Email:</strong> <a href="mailto:23127@student.embuni.ac.ke"> 23127@student.embuni.ac.ke</a>
+                </li>
+                <li><strong>Telephone:</strong> +254113236282</li>
+            </ul>
+        </div>
+
+        <!-- Footer with Copyright -->
+        <footer>
+            <p>&copy; 2024 Online Shop. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
